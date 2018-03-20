@@ -9,7 +9,7 @@
   
   
   if (isset($_GET['public'])) {
-	$app->after(function (Request $request, Response $response) {
+	$app->before(function (Request $request, Response $response) {
 		$response = new Response();
 		$response->headers->set('Access-Control-Allow-Origin', '*');
 		$response->headers->set('Content-type', 'text/plain; charset=utf-8');
