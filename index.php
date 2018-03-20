@@ -8,7 +8,6 @@
   $app = new Silex\Application();   
   
   
-  
   $app->get('/print', function(){
 	  $response = new Response(file_get_contents(basename(__FILE__)), 200);
 	  if (isset($_GET['public'])) {
@@ -20,25 +19,28 @@
   });
   
   $app->get('/author', function(){
-	 return '<h4 title="GossJS" id="author">Антон Бабахин</h4>'; 
+	  $response = new Response('<h4 title="GossJS" id="author">Антон Бабахин</h4>', 200);
+	  if (isset($_GET['public'])) {
+		  $response->headers->set('Access-Control-Allow-Origin', '*');
+		  $response->headers->set('Content-type', 'text/plain; charset=utf-8');
+		  $response->headers->set('Access-Control-Allow-Methods', 'GET,POST,DELETE');
+	  }
+	  return $response; 
   });
   
   $app->get('/info', function(){
 	 return phpinfo(); 
   });
   
-  /*
-  if (isset($_GET['public'])) {
-	$app->after(function (Request $request, Response $response) {
-		$response = new Response();
-		$response->headers->set('Access-Control-Allow-Origin', '*');
-		$response->headers->set('Content-type', 'text/plain; charset=utf-8');
-		$response->headers->set('Access-Control-Allow-Methods', 'GET,POST,DELETE');
-		
-		return $response;
-	});
-  }
-  */
+  $app->get('/', function(){
+	  $response = new Response('<h1>'.date("d/m/Y H:i").'</h1>', 200);
+	  if (isset($_GET['public'])) {
+		  $response->headers->set('Access-Control-Allow-Origin', '*');
+		  $response->headers->set('Content-type', 'text/plain; charset=utf-8');
+		  $response->headers->set('Access-Control-Allow-Methods', 'GET,POST,DELETE');
+	  }
+	  return $response; 
+  });
   
   
   $app->run();
