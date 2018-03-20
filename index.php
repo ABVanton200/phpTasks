@@ -1,14 +1,16 @@
 <?php
 
-  if (isset($_GET['print'])) {
-    header('Content-type: text/plain; charset=utf-8');
-    echo file_get_contents(basename(__FILE__));
-  }
-
-  if (isset($_GET['author'])) {
-    header('Content-type: text/html; charset=utf-8');
-    echo '<h4>Ilya Goss</h4>';
-  }
-  if (isset($_GET['info'])) {
-    phpinfo();
-  }
+  require 'vendor/autoload.php';
+  
+  $app = new Silex\Application();
+  
+  $app->get('/hello/{name}', function($name) use ($app) {
+	 return 'Hello '.$app->escape($name); 
+  });
+  
+  $app->get('/date', function(){
+	 return date('r'); 
+  });
+  
+  
+  $app->run();
