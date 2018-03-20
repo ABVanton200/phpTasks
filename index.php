@@ -8,14 +8,7 @@
   $app = new Silex\Application(); 
   
   
-  if (isset($_GET['public'])) {
-	$app->before(function (Request $request, Response $response) {
-		$response = new Response();
-		$response->headers->set('Access-Control-Allow-Origin', '*');
-		$response->headers->set('Content-type', 'text/plain; charset=utf-8');
-		$response->headers->set('Access-Control-Allow-Methods', 'GET,POST,DELETE');
-	});
-  }
+  
   
   $app->get('/print', function(){
 	 return file_get_contents(basename(__FILE__)); 
@@ -28,6 +21,17 @@
   $app->get('/info', function(){
 	 return phpinfo(); 
   });
+  
+  if (isset($_GET['public'])) {
+	$app->after(function (Request $request, Response $response) {
+		$response = new Response();
+		$response->headers->set('Access-Control-Allow-Origin', '*');
+		$response->headers->set('Content-type', 'text/plain; charset=utf-8');
+		$response->headers->set('Access-Control-Allow-Methods', 'GET,POST,DELETE');
+		
+		return $response;
+	});
+  }
   
   
   $app->run();
