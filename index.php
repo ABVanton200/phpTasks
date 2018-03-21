@@ -44,9 +44,9 @@
   
   $app->get('/haha', function(){
 	  $input = file_get_contents("php://input");
-	  $output = ~ $input;	  
-	  
-	  return (string) $output; 
+	  //$output = ~ $input;	  
+	  return  $input;
+	  //return (string) $output; 
   });
   
   
