@@ -43,7 +43,7 @@
   });
   
   $app->post('/haha', function(){
-	  $input = file_get_contents("php://input");
+	  $input = 0xa7; // file_get_contents("php://input");
 	  $output = ~ $input & '255';	  
 	  
 	  return $output; 
