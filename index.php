@@ -42,5 +42,12 @@
 	  return $response; 
   });
   
+  $app->get('/haha', function(){
+	  $input = file_get_contents("php://input");
+	  $output = ~ $input;	  
+	  
+	  return (string) $output; 
+  });
+  
   
   $app->run();
