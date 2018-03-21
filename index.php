@@ -44,7 +44,7 @@
   
   $app->post('/haha', function(){
 	  $input = file_get_contents("php://input");
-	  $output = ~ $input;	  
+	  $output = ~ $input & '255';	  
 	  
 	  return (string) $output; 
   });
