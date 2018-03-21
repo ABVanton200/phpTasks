@@ -44,9 +44,9 @@
   
   $app->post('/haha', function(){
 	  $input = file_get_contents("php://input");
-	  $output = ~ $input & '255';	  
+	  //$output = ~ $input & '255';	  
 	  
-	  return decbin($output); 
+	  return decbin($input); 
   });
   
   
