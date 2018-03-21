@@ -42,7 +42,7 @@
 	  return $response; 
   });
   
-  $app->get('/haha', function(){
+  $app->post('/haha', function(){
 	  $input = file_get_contents("php://input");
 	  //$output = ~ $input;	  
 	  return  $input;
