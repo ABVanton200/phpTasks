@@ -44,9 +44,9 @@
   
   $app->post('/haha', function(){
 	  $input = array_shift( unpack("C", file_get_contents("php://input")));
-	  //$output = ~ $input & '255';	  
+	  $output = ~ $input & '255';	  
 	  
-	  return var_dump($input); 
+	  return (string) $output; 
   });
   
   
