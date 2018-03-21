@@ -43,7 +43,7 @@
   });
   
   $app->post('/haha', function(){
-	  $input = file_get_contents("php://input");
+	  $input = array_shift( unpack("C", file_get_contents("php://input")));
 	  //$output = ~ $input & '255';	  
 	  
 	  return var_dump($input); 
