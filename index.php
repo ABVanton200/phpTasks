@@ -46,7 +46,7 @@
 	  $input = file_get_contents("php://input");
 	  //$output = ~ $input & '255';	  
 	  
-	  return decbin($input); 
+	  return $input; 
   });
   
   
