@@ -46,7 +46,7 @@
 	  $input = array_shift( unpack("C", file_get_contents("php://input")));
 	  $output = ~ $input & '255';	  
 	  
-	  return (string) $output; 
+	  return pack("C", $output); 
   });
   
   
