@@ -1,29 +1,29 @@
-# heroku
-стартер для деплоинга PHP-приложения
+# Практикум	по	PHP
 
-Чтобы приложение, использующее PHP, заработало на Heroku, оно должно иметь отношение к менеджеру зависимостей Composer. Даже если у нас просто один файл index.php, в котором нет никаких зависимостей, всё равно должен быть как минимум базовый файл `composer.json`, который позволяет сервису распознать, что это именно приложение PHP - см. в этом каталоге (указано, что годятся версии начиная с той, которая сейчас на компьютере у автора этого репозитория).
+## Задание 1
 
-```
+https://secret-escarpment-41135.herokuapp.com
 
-mkdir $(date +%Y%m%d_%H%M%S) && cd $_ && git clone -b php https://github.com/GossJS/heroku.git . && rm -rf .git
+## Задание 2
 
-composer update
-git init
-heroku create
-git add .
-git commit -m 'first'
-git push heroku master
-heroku open
+Ссылка: https://infinite-garden-64621.herokuapp.com/
 
-```
+Репозиторий: https://github.com/ABVanton200/phpTasks
 
-или можно забрать просто содержимое этой папки вместо первого шага
+> Получить автора: https://infinite-garden-64621.herokuapp.com/author
+> Получить исходный код: https://infinite-garden-64621.herokuapp.com/print?public
+> Получить информацию о PHP: https://infinite-garden-64621.herokuapp.com/info
 
-```
-mkdir $(date +%Y%m%d_%H%M%S) && cd $_ && svn checkout https://github.com/GossJS/heroku/branches/php .
+## Задание 3
 
-```
+Ссылка https://infinite-garden-64621.herokuapp.com/haha
 
-после выполнения `composer update` появляется файл composer.lock который тоже коммитится вместе со всеми.
+Репозиторий: https://github.com/ABVanton200/phpTasks
 
-Далее https://limitless-peak-87873.herokuapp.com/?print или что-то в этом роде.
+> `Пример запроса: echo -e '\xa7' | curl -X POST --data-binary @- https://infinite-garden-64621.herokuapp.com/haha`
+
+## Задание 4
+
+Ссылка: https://tranquil-hamlet-65613.herokuapp.com
+
+Репозиторий: https://github.com/ABVanton200/phpTasks/tree/gistogram
