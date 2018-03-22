@@ -11,7 +11,9 @@ https://secret-escarpment-41135.herokuapp.com
 Репозиторий: https://github.com/ABVanton200/phpTasks
 
 > Получить автора: https://infinite-garden-64621.herokuapp.com/author
+
 > Получить исходный код: https://infinite-garden-64621.herokuapp.com/print?public
+
 > Получить информацию о PHP: https://infinite-garden-64621.herokuapp.com/info
 
 ## Задание 3
