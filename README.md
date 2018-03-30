@@ -1,31 +1,24 @@
-# Практикум	по	PHP
+# 30.03.2018
 
 ## Задание 1
 
-https://secret-escarpment-41135.herokuapp.com
+https://codepen.io/babakhin/pen/GxxMeY?editors=1011
 
 ## Задание 2
 
-Ссылка: https://infinite-garden-64621.herokuapp.com/
-
-Репозиторий: https://github.com/ABVanton200/phpTasks
-
-> Получить автора: https://infinite-garden-64621.herokuapp.com/author
-
-> Получить исходный код: https://infinite-garden-64621.herokuapp.com/print?public
-
-> Получить информацию о PHP: https://infinite-garden-64621.herokuapp.com/info
+https://infinite-garden-64621.herokuapp.com/weather
 
 ## Задание 3
 
-Ссылка https://infinite-garden-64621.herokuapp.com/haha
+Ссылка https://infinite-garden-64621.herokuapp.com/add/100/12
 
-Репозиторий: https://github.com/ABVanton200/phpTasks
+Ещё:
 
-> `Пример запроса: echo -e '\xa7' | curl -X POST --data-binary @- https://infinite-garden-64621.herokuapp.com/haha`
+> https://infinite-garden-64621.herokuapp.com/sub/100/12
 
-## Задание 4
+> https://infinite-garden-64621.herokuapp.com/mpy/100/12
 
-Ссылка: https://tranquil-hamlet-65613.herokuapp.com
+> https://infinite-garden-64621.herokuapp.com/div/100/10
 
-Репозиторий: https://github.com/ABVanton200/phpTasks/tree/gistogram
+> https://infinite-garden-64621.herokuapp.com/pow/100/2
+
